@@ -13,7 +13,7 @@ public class AlarmService {
     public static void startAlarmService(Context context) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
-        Intent alarmIntent = new Intent(context, EntryIntentService.class);
+        Intent alarmIntent = new Intent(context, LocationService.class);
         PendingIntent pending = PendingIntent.getService(context, 0, alarmIntent, 0);
 
         if (alarmManager != null) {
